@@ -1,0 +1,63 @@
+@import "style";
+
+#navbar {
+  background-color: $clr-white;
+  height: 80px;
+  border-bottom: 1px solid $clr-black;
+
+  display: flex;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  > div {
+    width: 1000px;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      font-size: 20px;
+
+      &.active {
+        text-decoration: $clr-black 2px underline;
+      }
+
+      &#home {
+        font-weight: 700;
+        cursor: pointer;
+        img {
+          height: 40px;
+          border: 2px solid $clr-black;
+          border-radius: 100vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #navbar>div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #navbar>div {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #navbar>div :not(:first-child) {
+    display: none;
+  }
+}

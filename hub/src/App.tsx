@@ -1,23 +1,14 @@
 import React from 'react';
 import './App.scss';
-import logo from "./icons/logo_icon.png";
 import {projects} from "./data";
 import {ProjectCard} from "./Project";
 import {icons} from "./icons";
+import {Navbar} from "./Navbar";
 
 function App() {
   return (
     <>
-      <div id="navbar">
-        <div>
-          <div id="home">
-            <img src={logo} alt="JupiterPi logo" />
-            JupiterPi
-          </div>
-          <div>Projects</div>
-          <div>Music</div>
-        </div>
-      </div>
+      <Navbar />
       <div className="centered">
 
         <section id="hello-section">
@@ -25,7 +16,7 @@ function App() {
           <p>
             I'm a student, software developer, designer and musician from Mannheim, Germany.
           </p>
-          <div id="social-links">
+          <div className="chips">
             <a href="https://www.youtube.com/@jupiterpi" target="_blank" id="youtube" className="chip">
               <img src={icons.youtube} style={{height: 15}} />
               @JupiterPi
@@ -41,7 +32,7 @@ function App() {
           <h2>Projects</h2>
           <div>
             {projects.slice(0, 2).map(project => <ProjectCard project={project}/>)}
-            <div className="centered">
+            <div style={{display: "flex", justifyContent: "center"}}>
               <a href="/projects" className="chip">Show more</a>
             </div>
           </div>

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 $clr-white: #f6f6f6;
 $clr-black: #181818;
@@ -17,7 +16,6 @@ body {
   color: $clr-black;
   font-family: "JetBrains Mono", monospace;
   font-weight: 500;
-  //font-family: "DM Sans", sans-serif;
 }
 
 .card {
@@ -56,4 +54,10 @@ a.chip {
     //outline: 1px solid black;
     background: transparentize($clr-black, 0.9);
   }
+}
+
+.chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
