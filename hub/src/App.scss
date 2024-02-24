@@ -1,0 +1,114 @@
+@import "style";
+
+#navbar {
+    background-color: $clr-white;
+    height: 80px;
+    border-bottom: 1px solid $clr-black;
+
+    display: flex;
+    justify-content: center;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    > div {
+        width: 50%;
+
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            font-size: 20px;
+
+            &.active {
+                text-decoration: $clr-black 2px underline;
+            }
+
+            &#home {
+                font-weight: 700;
+                cursor: pointer;
+                img {
+                    height: 40px;
+                    border: 2px solid $clr-black;
+                    border-radius: 100vw;
+                }
+            }
+        }
+    }
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    section {
+        width: 1000px;
+        border: 1px solid red;
+        padding: 0 20px;
+    }
+}
+
+#hello-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h1 {
+        margin-top: 100px;
+        margin-bottom: 0;
+
+        font-size: 40px;
+        div {
+            font-size: 80px;
+            background: linear-gradient(139deg, rgba(26,115,232,1) 0%, rgba(52,168,83,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    #social-links {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+#projects-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-status-chip {
+        display: inline-block;
+        margin-left: 20px;
+        border: 2px solid $clr-black;
+        border-radius: 100vw;
+        font-size: 13px;
+        text-transform: uppercase;
+        padding: 2px 7px;
+
+        &.status-in-progress {
+            background-color: transparentize($clr-blue, 0.2);
+        }
+        &.status-done {
+            background-color: transparentize($clr-green, 0.2);
+        }
+        &.status-paused {
+            background-color: transparentize($clr-yellow, 0.2);
+        }
+    }
+}
+
+#music-section {
+    margin-bottom: 50px;
+}
