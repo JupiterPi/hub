@@ -20,6 +20,10 @@ export default function Home() {
             <img src="/icons/github_icon.png" style={{height: 18}}/>
             @JupiterPi
           </a>
+          <a href="mailto:hello@jupiterpi.de" className="chip">
+            <img src="/icons/mail_icon.png" style={{height: 14}}/>
+            hello@jupiterpi.de
+        </a>
         </div>
       </section>
 
