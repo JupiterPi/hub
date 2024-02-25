@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "deploy": "next build && firebase deploy"
   },
   "dependencies": {
     "classnames": "^2.5.1",
