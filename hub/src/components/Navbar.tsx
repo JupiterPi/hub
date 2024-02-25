@@ -2,8 +2,9 @@
 
 import "./Navbar.scss";
 import {usePathname} from "next/navigation";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import className from "classnames";
+import Link from "next/link";
 
 export function Navbar() {
   const path = usePathname();
@@ -11,19 +12,23 @@ export function Navbar() {
 
   const navigationContent = (
     <>
-      <a href="/projects" className={path === "/projects" ? "active" : undefined}>Projects</a>
-      <a href="/music" className={path === "/music" ? "active" : undefined}>Music</a>
+      <Link href="/projects" className={path === "/projects" ? "active" : undefined}>Projects</Link>
+      <Link href="/music" className={path === "/music" ? "active" : undefined}>Music</Link>
     </>
   );
+
+  useEffect(() => {
+    setExpand(false);
+  }, [path]);
 
   return (
     <>
       <div id="navbar">
         <div>
-          <a id="home" href="/">
+          <Link id="home" href="/">
             <img src="/icons/logo_icon.png" alt="JupiterPi logo" />
             JupiterPi
-          </a>
+          </Link>
           <div id="button-container">
             <button onClick={() => setExpand(expand => !expand)}>
               <img src="/icons/menu_icon.png" height={20} />

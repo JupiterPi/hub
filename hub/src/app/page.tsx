@@ -1,6 +1,7 @@
 import "./page.scss";
 import {projects} from "@/data";
 import {ProjectCard} from "@/components/Project";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <section id="hello-section">
         <h1>Hi, I am <div>JupiterPi</div></h1>
         <p>
-          I&apos;m a student, software developer, designer and musician from Mannheim, Germany.
+          I'm a student, software developer, designer and musician from Mannheim, Germany.
         </p>
         <div className="chips">
           <a href="https://www.youtube.com/@jupiterpi" target="_blank" id="youtube" className="chip">
@@ -32,7 +33,7 @@ export default function Home() {
         <div className="layout-column-20">
           {projects.slice(0, 2).map(project => <ProjectCard key={project.name} project={project}/>)}
           <div className="center-horizontally">
-            <a href="/projects" className="chip">Show more</a>
+            <Link href="/projects" className="chip">Show more</Link>
           </div>
         </div>
       </section>

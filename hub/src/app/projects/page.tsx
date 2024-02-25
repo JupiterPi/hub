@@ -1,5 +1,10 @@
 import {projects} from "@/data";
 import {ProjectCard} from "@/components/Project";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: "JupiterPi | Projects"
+};
 
 export default function ProjectsPage() {
   return (
