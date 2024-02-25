@@ -1,6 +1,6 @@
 @import "@/app/style";
 
-#navbar {
+#navbar, #secondary-navbar {
   background-color: $clr-white;
   height: 80px;
   border-bottom: 1px solid $clr-black;
@@ -9,8 +9,16 @@
   justify-content: center;
 
   position: sticky;
-  top: 0;
   width: 100%;
+
+  &#navbar { top: 0; }
+  &#secondary-navbar { top: 81px; }
+
+  .navigation-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
 
   > div {
     width: 1000px;
@@ -44,6 +52,26 @@
         }
       }
     }
+
+    #button-container {
+      flex: 1;
+
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        background: none;
+        border: 2px solid $clr-black;
+        border-radius: 10px;
+        padding: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include hoverable;
+      }
+    }
   }
 }
 
@@ -59,8 +87,13 @@
   }
 }
 
+@media screen and (min-width: 600px) {
+  #button-container, #secondary-navbar {
+    display: none !important;
+  }
+}
 @media screen and (max-width: 600px) {
-  #navbar>div :not(:first-child) {
-    display: none;
+  #navbar-navigation {
+    display: none !important;
   }
 }

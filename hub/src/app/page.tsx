@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="music-section">
+      <section>
         <h2>Music</h2>
         Added here soon...
       </section>

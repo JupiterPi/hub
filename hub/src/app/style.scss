@@ -20,6 +20,12 @@ body {
 
 /* --- components --- */
 
+@mixin hoverable {
+  &:hover {
+    background: transparentize($clr-black, 0.9);
+  }
+}
+
 // cards
 
 .card {
@@ -56,10 +62,7 @@ a.chip {
   border-radius: 100vw;
 
   border: 2px solid;
-  &:hover {
-    //outline: 1px solid black;
-    background: transparentize($clr-black, 0.9);
-  }
+  @include hoverable;
 }
 
 .chips {
