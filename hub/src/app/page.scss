@@ -1,37 +1,12 @@
 @import "style";
 
-.centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  section {
-    width: 1000px;
-    padding: 0 30px;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .centered {
-    align-items: stretch;
-  }
-  .centered section {
-    width: auto;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .centered section {
-    padding: 0 20px;
-  }
-}
-
 #hello-section {
   display: flex;
   flex-direction: column;
   gap: 15px;
 
   h1 {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 0;
 
     font-size: 40px;
@@ -49,37 +24,6 @@
     font-size: 25px !important;
     div {
       font-size: 50px !important;
-    }
-  }
-}
-
-#projects-section {
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  > div {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .project-status-chip {
-    display: inline-block;
-    margin-left: 20px;
-    border: 2px solid $clr-black;
-    border-radius: 100vw;
-    font-size: 13px;
-    text-transform: uppercase;
-    padding: 2px 7px;
-
-    &.status-in-progress {
-      background-color: transparentize($clr-blue, 0.2);
-    }
-    &.status-done {
-      background-color: transparentize($clr-green, 0.2);
-    }
-    &.status-paused {
-      background-color: transparentize($clr-yellow, 0.2);
     }
   }
 }

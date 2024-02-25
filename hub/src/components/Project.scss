@@ -1,0 +1,21 @@
+@import "../app/style";
+
+.project-status-chip {
+  display: inline-block;
+  margin-left: 20px;
+  border: 2px solid $clr-black;
+  border-radius: 100vw;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+
+  &.status-in-progress {
+    background-color: transparentize($clr-blue, 0.2);
+  }
+  &.status-done {
+    background-color: transparentize($clr-green, 0.2);
+  }
+  &.status-paused {
+    background-color: transparentize($clr-yellow, 0.2);
+  }
+}

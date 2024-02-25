@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./style.scss";
 import {Navbar} from "@/components/Navbar";
+import "./layout.scss";
 
 export const metadata: Metadata = {title: "JupiterPi"};
 
@@ -13,7 +14,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
       <Navbar />
-      {children}
+      <div className="main">
+        {children}
+      </div>
       </body>
     </html>
   );

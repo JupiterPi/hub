@@ -1,5 +1,6 @@
 import className from "classnames";
 import {Project} from "@/data";
+import "./Project.scss";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (

@@ -4,7 +4,7 @@ import {ProjectCard} from "@/components/Project";
 
 export default function Home() {
   return (
-    <div className="centered">
+    <>
 
       <section id="hello-section">
         <h1>Hi, I am <div>JupiterPi</div></h1>
@@ -23,11 +23,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects-section">
+      <section>
         <h2>Projects</h2>
-        <div>
+        <div className="layout-column-20">
           {projects.slice(0, 2).map(project => <ProjectCard key={project.name} project={project}/>)}
-          <div style={{display: "flex", justifyContent: "center"}}>
+          <div className="center-horizontally">
             <a href="/projects" className="chip">Show more</a>
           </div>
         </div>
@@ -38,6 +38,6 @@ export default function Home() {
         Added here soon...
       </section>
 
-    </div>
+    </>
   );
 }

@@ -4,12 +4,12 @@ export function Navbar() {
   return (
     <div id="navbar">
       <div>
-        <div id="home">
+        <a id="home" href="/">
           <img src="/icons/logo_icon.png" alt="JupiterPi logo" />
           JupiterPi
-        </div>
-        <div>Projects</div>
-        <div>Music</div>
+        </a>
+        <a href="/projects">Projects</a>
+        <a href="/music">Music</a>
       </div>
     </div>
   );

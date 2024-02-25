@@ -18,6 +18,10 @@ body {
   font-weight: 500;
 }
 
+/* --- components --- */
+
+// cards
+
 .card {
   border: 2px solid $clr-black;
   padding: 20px;
@@ -34,6 +38,8 @@ body {
     align-items: center;
   }
 }
+
+// chips
 
 a.chip {
   color: inherit;
@@ -60,4 +66,17 @@ a.chip {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+/* --- utility --- */
+
+.layout-column-20 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.center-horizontally {
+  display: flex;
+  justify-content: center;
 }
