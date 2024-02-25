@@ -1,6 +1,5 @@
-import {Project} from "./data";
 import className from "classnames";
-import {icons} from "./icons";
+import {Project} from "@/data";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -19,13 +18,13 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="chips">
         {project.githubRepo != null && (
           <a className="chip" href={"https://github.com/JupiterPi/" + project.githubRepo} target="_blank">
-            <img src={icons.github} height={18} />
+            <img src="/icons/github_icon.png" height={18} />
             {project.githubRepo}
           </a>
         )}
         {project.links?.map(link => (
-          <a className="chip" href={link.url} target="_blank">
-            <img src={icons.link} height={15} />
+          <a key={link.url} className="chip" href={link.url} target="_blank">
+            <img src="/icons/link_icon.png" height={15} />
             {link.title}
           </a>
         ))}

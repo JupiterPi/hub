@@ -1,5 +1,3 @@
-import logo from "./icons/logo_icon.png";
-import React from "react";
 import "./Navbar.scss";
 
 export function Navbar() {
@@ -7,7 +5,7 @@ export function Navbar() {
     <div id="navbar">
       <div>
         <div id="home">
-          <img src={logo} alt="JupiterPi logo" />
+          <img src="/icons/logo_icon.png" alt="JupiterPi logo" />
           JupiterPi
         </div>
         <div>Projects</div>
