@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "deploy": "next build && firebase deploy"
+    "build": "next build"
   },
   "dependencies": {
     "@vercel/postgres-kysely": "^0.7.2",
