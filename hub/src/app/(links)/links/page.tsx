@@ -1,8 +1,8 @@
-import {db} from "@/db";
 import "./page.scss";
+import {getLinks} from "@/db/links";
 
 export default async function LinksPage() {
-  const links = await db.selectFrom("link").select(["link", "url", "times_visited"]).execute();
+  const links = await getLinks();
 
   return (
     <table>

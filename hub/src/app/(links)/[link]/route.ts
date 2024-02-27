@@ -1,8 +1,8 @@
 import {redirect} from "next/navigation";
-import {db} from "@/db";
+import {getLink} from "@/db/links";
 
 export async function GET(_: Request, {params}: {params: {link: string}}){
-  const link = await db.selectFrom("link").where("link", "=", params.link).select(["url"]).executeTakeFirst();
+  const link = await getLink(params.link);
   if (link == undefined) return new Response("Not found", {status: 404});
   redirect(link.url);
 }
