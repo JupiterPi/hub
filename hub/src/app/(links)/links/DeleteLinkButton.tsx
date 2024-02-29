@@ -1,11 +1,9 @@
 "use client";
 
-export function DeleteLinkButton({id}: {id: string}) {
-  const deleteHandler = () => {
-    fetch(`/api/links/${id}`, { method: "DELETE" });
-  };
+import {deleteLink} from "@/db/links";
 
+export function DeleteLinkButton({id}: {id: string}) {
   return (
-    <button onClick={deleteHandler}>Delete</button>
+    <button onClick={() => deleteLink(id)}>Delete</button>
   );
 }

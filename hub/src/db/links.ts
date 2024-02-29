@@ -1,3 +1,5 @@
+"use server";
+
 import {db} from "@/db/db";
 
 export async function getLinks() {
@@ -9,9 +11,10 @@ export async function getLink(link: string) {
 }
 
 export async function createLink(link: string, url: string) {
-  return await db.insertInto("link").values({link, url, times_visited: 0}).execute();
+  await db.insertInto("link").values({link, url, times_visited: 0}).execute();
 }
 
 export async function deleteLink(link: string) {
-  return await db.deleteFrom("link").where("link", "=", link).execute();
+  console.log(`deleting link: ${link}`);
+  await db.deleteFrom("link").where("link", "=", link).execute();
 }

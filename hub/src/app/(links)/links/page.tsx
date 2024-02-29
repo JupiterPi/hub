@@ -1,14 +1,13 @@
 import "./page.scss";
 import {getLinks} from "@/db/links";
-import {DeleteLinkButton} from "@/app/(links)/links/DeleteLinkButton";
 import {AddLinkForm} from "@/app/(links)/links/AddLinkForm";
+import {DeleteLinkButton} from "@/app/(links)/links/DeleteLinkButton";
 
 export default async function LinksPage() {
   const links = await getLinks();
 
   return (
     <>
-
       <AddLinkForm/>
 
       <table>
@@ -25,7 +24,9 @@ export default async function LinksPage() {
             <td>{link.link}</td>
             <td>{link.url}</td>
             <td>{link.times_visited}</td>
-            <td><DeleteLinkButton id={link.link} /></td>
+            <td>
+              <DeleteLinkButton id={link.link} />
+            </td>
           </tr>
         ))}
         </tbody>
