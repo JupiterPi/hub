@@ -1,26 +1,37 @@
-import * as db from "@/db/links";
+"use client";
+
+import {createLink} from "./actions";
+import {useEffect, useRef, useState} from "react";
 
 export function AddLinkForm() {
-  async function createLink(formData: FormData) {
-    "use server";
-    const link = {
-      link: formData.get("link") as string,
-      url: formData.get("url") as string
-    };
-    await db.createLink(link.link, link.url);
-  }
+  const ref = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<{success: boolean, message: string} | null>(null);
+
+  const [timeoutReference, setTimeoutReference] = useState<NodeJS.Timeout | null>(null);
+  useEffect(() => {
+    if (timeoutReference) clearTimeout(timeoutReference);
+    setTimeoutReference(setTimeout(() => setStatus(null), 3000));
+  }, [status]);
+
+  const [link, setLink] = useState("");
+  const [url, setUrl] = useState("");
 
   return (
-    <form action={createLink}>
+    <form ref={ref} action={async () => {
+      const status = await createLink({link, url});
+      if (status.success) ref.current?.reset();
+      setStatus(status);
+    }}>
       <div>
         <label>Link: </label>
-        <input name="link" />
+        <input onChange={e => setLink(e.target.value)} />
       </div>
       <div>
         <label>URL: </label>
-        <input type="url" name="url" />
+        <input type="url" onChange={e => setUrl(e.target.value)} />
       </div>
       <button type="submit" style={{alignSelf: "center"}}>Add</button>
+      {status != null && <div style={{alignSelf: "center", color: status.success ? "green" : "red"}}>{status.message}</div>}
     </form>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import {deleteLink} from "@/db/links";
+import {deleteLink} from "./actions";
 
 export function DeleteLinkButton({id}: {id: string}) {
   return (

@@ -15,6 +15,5 @@ export async function createLink(link: string, url: string) {
 }
 
 export async function deleteLink(link: string) {
-  console.log(`deleting link: ${link}`);
   await db.deleteFrom("link").where("link", "=", link).execute();
 }
