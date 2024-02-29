@@ -1,17 +1,13 @@
 "use client";
 
 import {createLink} from "./actions";
-import {useEffect, useRef, useState} from "react";
+import {useRef, useState} from "react";
+import "@/util/useEphemeralState";
+import useEphemeralState from "@/util/useEphemeralState";
 
 export function AddLinkForm() {
   const ref = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<{success: boolean, message: string} | null>(null);
-
-  const [timeoutReference, setTimeoutReference] = useState<NodeJS.Timeout | null>(null);
-  useEffect(() => {
-    if (timeoutReference) clearTimeout(timeoutReference);
-    setTimeoutReference(setTimeout(() => setStatus(null), 3000));
-  }, [status]);
+  const [status, setStatus] = useEphemeralState<{success: boolean, message: string} | null>(null, 3000);
 
   const [link, setLink] = useState("");
   const [url, setUrl] = useState("");
