@@ -50,7 +50,7 @@ export const projects: Project[] = [
   {
     name: "Filen Desktop Client Fork",
     status: "completed",
-    descriptions: "This fork of the Filen desktop client includes additional features such as physical .filenignore files.",
+    description: "This fork of the Filen desktop client includes additional features such as physical .filenignore files.",
     githubRepo: "filen-desktop"
   }
 ]
