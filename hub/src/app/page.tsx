@@ -31,7 +31,7 @@ export default function Home() {
       <section>
         <h2>Projects</h2>
         <div className="layout-column-20">
-          {projects.slice(0, 2).map(project => <ProjectCard key={project.name} project={project}/>)}
+          {projects.slice(0, 3).map(project => <ProjectCard key={project.name} project={project}/>)}
           <div className="center-horizontally">
             <Link href="/projects" className="chip">Show more</Link>
           </div>
