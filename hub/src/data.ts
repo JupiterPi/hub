@@ -26,8 +26,9 @@ export const projects: Project[] = [
   {
     name: "Majesty Online",
     status: "completed",
-    description: "Majesty Online is a realtime online game adaptation of the popular board game Majesty.",
-    githubRepo: "majesty"
+    description: "Majesty Online is a realtime online multiplayer adaptation of the popular board game Majesty.",
+    githubRepo: "majesty",
+    links: [{url: "https://majesty.jupiterpi.de", title: "majesty.jupiterpi.de"}]
   },
   {
     name: "RedstoneLink",
