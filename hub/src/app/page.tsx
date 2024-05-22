@@ -24,7 +24,18 @@ export default function Home() {
           <a href="mailto:hello@jupiterpi.de" className="chip">
             <img src="/icons/mail_icon.png" style={{height: 14}}/>
             hello@jupiterpi.de
-        </a>
+          </a>
+        </div>
+        <div className="card" id="filen">
+          <img src="https://filen.io/images/logo_dark.svg"/>
+          <div>
+            I'm a developer at Filen:
+            <br/>
+            Zero-knowledge end-to-end encrypted cloud storage
+          </div>
+          <div>
+            <a href="https://filen.io/" target="_blank" className="chip">Try for free</a>
+          </div>
         </div>
       </section>
 

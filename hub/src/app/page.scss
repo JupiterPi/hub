@@ -3,7 +3,11 @@
 #hello-section {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
+
+  p {
+    margin: 0;
+  }
 
   h1 {
     margin-top: 50px;
@@ -16,6 +20,17 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+  }
+}
+
+#filen {
+  display: flex;
+  align-items: flex-start;
+  width: fit-content;
+  padding-right: 30px;
+
+  img {
+    height: 50px;
   }
 }
 
