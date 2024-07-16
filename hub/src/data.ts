@@ -26,8 +26,7 @@ export const projects: Project[] = [
     name: "Vocabulum",
     status: "paused",
     description: "Vocabulum is a Latin vocabulary trainer app.",
-    githubRepo: "vocabulum-webapp",
-    links: [{url: "https://vocabulum.de", title: "vocabulum.de"}]
+    githubRepo: "vocabulum-webapp"
   },
   {
     name: "Majesty Online",
