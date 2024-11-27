@@ -27,7 +27,7 @@ export default function Home() {
           </a>
         </div>
         <div className="card" id="filen">
-          <img src="https://filen.io/images/logo_dark.svg"/>
+          <img src="/icons/filen_icon.png"/>
           <div>
             I'm a developer at Filen:
             <br/>
