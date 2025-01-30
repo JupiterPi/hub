@@ -18,7 +18,7 @@ export function ProjectCard({ project }: { project: Project }) {
       {project.description}
       <div className="chips">
         {project.githubRepo != null && (
-          <a className="chip" href={"https://github.com/JupiterPi/" + project.githubRepo} target="_blank">
+          <a className="chip" href={`https://github.com/${project.githubRepo.includes("/") ? "" : "JupiterPi/"}${project.githubRepo}`} target="_blank">
             <img src="/icons/github_icon.png" height={18} />
             {project.githubRepo}
           </a>

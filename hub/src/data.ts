@@ -13,7 +13,7 @@ export const projects: Project[] = [
     name: "Filen CLI",
     status: "completed",
     description: "The Filen CLI is a text-based way of interacting with your Filen cloud storage.",
-    links: [{url: "https://github.com/FilenCloudDienste/filen-cli", title: "FilenCloudDienste/filen-cli"}]
+    githubRepo: "FilenCloudDienste/filen-cli",
   },
   {
     name: "Cranberri",
