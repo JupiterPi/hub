@@ -3,7 +3,7 @@ import {ProjectCard} from "@/components/Project";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-  title: "JupiterPi | Projects"
+  title: "Projects | JupiterPi"
 };
 
 export default function ProjectsPage() {

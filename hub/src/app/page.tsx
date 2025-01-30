@@ -10,7 +10,7 @@ export default function Home() {
       <section id="hello-section">
         <h1>Hi, I am <div>JupiterPi</div></h1>
         <p>
-          I'm a student, software developer, designer and musician from Mannheim, Germany.
+          I'm a software-developing and music-making student from Mannheim, Germany.
         </p>
         <div className="chips">
           <a href="https://www.youtube.com/@jupiterpi" target="_blank" id="youtube" className="chip">

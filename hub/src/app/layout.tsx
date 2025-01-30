@@ -15,6 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="description" content="Hi, I'm JupiterPi. I'm a software-developing and music-making student from Mannheim, Germany." />
+      </head>
       <body className={jetbrainsMono.className}>
       <Navbar />
       <div className="main">
