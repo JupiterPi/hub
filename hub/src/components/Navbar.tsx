@@ -26,7 +26,7 @@ export function Navbar() {
       <div id="navbar">
         <div>
           <Link id="home" href="/">
-            <img src="/icons/logo_icon.png" alt="JupiterPi logo" />
+            <img src="/icons/logo.png" alt="JupiterPi logo" />
             JupiterPi
           </Link>
           <div id="button-container">
