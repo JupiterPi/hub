@@ -17,10 +17,23 @@ export const projects: Project[] = [
   },
   {
     name: "Cranberri",
-    status: "in progress",
+    status: "completed",
     description: "Cranberri is a Minecraft microcontrollers mod that can be used in schools.",
     githubRepo: "cranberri",
     links: [{url: "https://cranberri.jupiterpi.de", title: "cranberri.jupiterpi.de"}]
+  },
+  {
+    name: "Thyme",
+    status: "in progress",
+    description: "Thyme is a stopwatch in your taskbar with history, notes and a Kimai integration",
+    githubRepo: "thyme"
+  },
+  {
+    name: "Majesty Online",
+    status: "completed",
+    description: "Majesty Online is a realtime online multiplayer adaptation of the board game Majesty.",
+    githubRepo: "majesty",
+    links: [{url: "https://majesty.jupiterpi.de", title: "majesty.jupiterpi.de"}]
   },
   {
     name: "Vocabulum",
@@ -29,34 +42,21 @@ export const projects: Project[] = [
     githubRepo: "vocabulum-webapp"
   },
   {
-    name: "Majesty Online",
-    status: "completed",
-    description: "Majesty Online is a realtime online multiplayer adaptation of the popular board game Majesty.",
-    githubRepo: "majesty",
-    links: [{url: "https://majesty.jupiterpi.de", title: "majesty.jupiterpi.de"}]
-  },
-  {
     name: "RedstoneLink",
     status: "completed",
     description: "RedstoneLink is a Minecraft mod that connects Redstone to physical electronics in real time.",
     githubRepo: "RedstoneLink"
   },
-  {
+  /*{
     name: "verse",
     status: "paused",
     description: "verse is an experimental metaverse prototype.",
     githubRepo: "verse"
-  },
-  {
+  },*/
+  /*{
     name: "pilang",
     status: "paused",
     description: "pilang is a custom scripting language that can be embedded in JVM applications.",
     githubRepo: "pilang"
-  },
-  {
-    name: "Filen Desktop Client Fork",
-    status: "completed",
-    description: "This fork of the Filen desktop client includes additional features such as physical .filenignore files.",
-    githubRepo: "filen-desktop"
-  }
+  }*/
 ]
