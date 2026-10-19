@@ -1,6 +1,6 @@
 "use client";
 
-import {createLink} from "./actions";
+/* import {createLink} from "./actions";
 import {useState} from "react";
 import "@/util/useEphemeralState";
 import useEphemeralState from "@/util/useEphemeralState";
@@ -34,4 +34,4 @@ export function AddLinkForm() {
       {status != null && <div style={{alignSelf: "center", color: status.success ? "green" : "red"}}>{status.message}</div>}
     </div>
   );
-}
+} */

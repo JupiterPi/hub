@@ -1,7 +1,7 @@
-import {Metadata} from "next";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Music | JupiterPi"
+  title: "Music | JupiterPi",
 };
 
 export default function MusicPage() {
@@ -9,7 +9,7 @@ export default function MusicPage() {
     <>
       <section>
         <h2>Music</h2>
-        Added here soon...
+        Added here in the future maybe...
       </section>
     </>
   );
